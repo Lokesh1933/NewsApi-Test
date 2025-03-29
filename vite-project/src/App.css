@@ -1,0 +1,177 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #9c27b0, #ff4081);
+
+
+
+
+
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;  /* Add a max-width to prevent the content from becoming too wide */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: auto;  /* Enable scrolling */
+  max-height: 90vh; /* Ensure it's scrollable */
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Category Selector */
+.category-selector {
+  margin-bottom: 20px;
+}
+
+.category-selector select {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2575fc;
+  color: white;
+  cursor: pointer;
+}
+
+.category-selector select:hover {
+  background-color: #6a11cb;
+}
+
+/* Articles List */
+.articles-list {
+  width: 100%;
+  padding: 10px;
+  overflow-y: auto;  /* Allow vertical scrolling within the article list */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.article-card {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.article-card h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.article-card p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.article-card a {
+  font-size: 1rem;
+  color: #2575fc;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.article-card a:hover {
+  text-decoration: underline;
+}
+
+/* Loading State */
+.loading {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.pagination button:hover {
+  background-color: #6a11cb;
+}
+
+.pagination button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .category-selector select {
+    font-size: 0.9rem;
+  }
+
+  .article-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .pagination {
+    font-size: 0.9rem;
+  }
+}
